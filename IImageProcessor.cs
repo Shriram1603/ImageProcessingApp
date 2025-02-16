@@ -9,7 +9,17 @@ namespace ImageProcessingApp.Plugins;
 /// </summary>
 public interface IImageProcessor
 {
-    string Name { get; }  // Plugin name
+    /// <summary>
+    /// Name of the plugin
+    /// </summary>
+    string Name { get; }
+
+    /// <summary>
+    /// Process that the function performs 
+    /// on the image
+    /// </summary>
+    /// <param name="image"><see cref="Image<Rgba32>"/> type</param>
+    /// <returns>><see cref="Image<Rgba32>"/></returns>
     Image<Rgba32> ProcessImage(Image<Rgba32> image);
 }
 
